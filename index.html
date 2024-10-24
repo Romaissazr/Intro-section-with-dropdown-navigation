@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <link rel="stylesheet" href="styles.css">
+    <title>Frontend Mentor | Intro section with dropdown navigation</title>
+</head>
+<body>
+
+    <nav>
+        <div class="links">
+            <img src="images/logo.svg" alt="Logo">
+            <ul>
+                <li>
+                    <span onclick="toggleFeatures(event)">Features</span>
+                    <img src="images/icon-arrow-down.svg" alt="Arrow down" class="arrow" id="downF" onclick="toggleFeatures(event)">
+                </li>
+                <li>
+                    <span onclick="toggleCompany(event)">Company </span>
+                    <img src="images/icon-arrow-down.svg" alt="Arrow down" class="arrow" id="downC" onclick="toggleCompany(event)">
+                </li>
+                <li><a href="#">Careers</a></li>
+                <li><a href="#">About</a></li>
+            </ul>
+        </div>
+        <div class="btns">
+            <button>Login</button>
+            <button>Register</button>
+        </div>
+        <div class="features" id="features">
+            <ul>
+                <li><img src="images/icon-todo.svg" alt="Todo"><span>Todo List</span></li>
+                <li><img src="images/icon-calendar.svg" alt="Calendar"><span>Calendar</span></li>
+                <li><img src="images/icon-reminders.svg" alt="Reminders"><span>Reminders</span></li>
+                <li><img src="images/icon-planning.svg" alt="Planning"><span>Planning</span></li>
+            </ul>
+        </div>
+        <div class="company" id="company">
+            <ul>
+                <li>History</li>
+                <li>Our Team</li>
+                <li>Blog</li>
+            </ul>
+        </div>
+        <img src="images/icon-menu.svg" alt="Menu" id="menu" onclick="moveDiv()">
+    </nav>
+
+    <section class="hero">
+        <div class="txt">
+            <h1>Make remote work</h1>
+            <p>Get your team in sync, no matter your location. Streamline processes, create team rituals, and watch productivity soar.</p>
+            <button>Learn more</button>
+            <div class="logos">
+                <img src="images/client-databiz.svg" alt="Databiz">
+                <img src="images/client-audiophile.svg" alt="Audiophile">
+                <img src="images/client-meet.svg" alt="Meet">
+                <img src="images/client-maker.svg" alt="Maker">
+            </div>
+        </div>
+        <img src="images/image-hero-desktop.png" alt="Hero image" class="desktop">
+        <img src="images/image-hero-mobile.png" alt="Hero image" class="mobile">
+    </section>
+
+    <aside id="aside" class="aside">
+        <img src="images/icon-close-menu.svg" alt="Close menu" onclick="moveDivBack()" class="close">
+        <ul>   
+            <li>
+                <span onclick="toggleFeaturesM(event)">Features</span>
+                <img src="images/icon-arrow-down.svg" alt="Arrow down" class="arrow" id="downFm" onclick="toggleFeaturesM(event)">
+            </li>
+            <div class="features" id="featuresm">
+                <ul>
+                    <li><img src="images/icon-todo.svg" alt="Todo"><span>Todo List</span></li>
+                    <li><img src="images/icon-calendar.svg" alt="Calendar"><span>Calendar</span></li>
+                    <li><img src="images/icon-reminders.svg" alt="Reminders"><span>Reminders</span></li>
+                    <li><img src="images/icon-planning.svg" alt="Planning"><span>Planning</span></li>
+                </ul>
+            </div>
+            <li>
+                <span onclick="toggleCompanyM(event)">Company </span>
+                <img src="images/icon-arrow-down.svg" alt="Arrow down" class="arrow" id="downCm" onclick="toggleCompanyM(event)">
+            </li>
+            <div class="company" id="companym">
+                <ul>
+                    <li>History</li>
+                    <li>Our Team</li>
+                    <li>Blog</li>
+                </ul>
+            </div>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">About</a></li>
+        </ul>
+        <div class="btns">
+            <button>Login</button>
+            <button>Register</button>
+        </div>
+    </aside>
+
+    <script src="script.js"></script>
+</body>
+</html>
